@@ -10,7 +10,13 @@ if (calculateBtn) {
     calculateBtn.addEventListener("click", calculateDCF);
 }
 
-function calculateDCF() {
+function calculateDCF() {const resultBox = document.querySelector(".result-box");
+
+if(resultBox){
+
+    resultBox.classList.remove("show");
+
+}
 
     const fcf = parseFloat(document.getElementById("fcf").value);
     const growth = parseFloat(document.getElementById("growth").value) / 100;
