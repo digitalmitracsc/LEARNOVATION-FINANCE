@@ -67,7 +67,9 @@ function calculateDCF() {
     // Margin of Safety
     const mos =
         ((intrinsic - cmp) / intrinsic) * 100;
-
+    // Upside Potential
+    const upside =
+        ((intrinsic - cmp) / cmp) * 100;
     // Result
     document.getElementById("intrinsicValue").innerHTML =
         "₹" + intrinsic.toFixed(2);
