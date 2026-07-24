@@ -126,3 +126,34 @@ else {
 }
 
 document.getElementById("analysisSummary").innerHTML = summary;
+// ======================================
+// Reset Calculator
+// ======================================
+
+const resetBtn = document.getElementById("resetBtn");
+
+if (resetBtn) {
+
+    resetBtn.addEventListener("click", resetCalculator);
+
+}
+
+function resetCalculator() {
+
+    document.getElementById("fcf").value = "";
+    document.getElementById("growth").value = "";
+    document.getElementById("discount").value = "";
+    document.getElementById("terminal").value = "";
+    document.getElementById("shares").value = "";
+    document.getElementById("cmp").value = "";
+
+    document.getElementById("intrinsicValue").innerHTML = "₹0.00";
+    document.getElementById("currentPrice").innerHTML = "₹0.00";
+    document.getElementById("upsidePotential").innerHTML = "0%";
+    document.getElementById("marginSafety").innerHTML = "0%";
+    document.getElementById("valuationStatus").innerHTML = "WAIT";
+
+    document.getElementById("analysisSummary").innerHTML =
+        "Fill the values and click Calculate.";
+
+}
