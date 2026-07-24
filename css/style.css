@@ -1028,3 +1028,24 @@ section{
     color:#EF4444 !important;
 
 }
+/*==================================================
+            RESULT ANIMATION
+==================================================*/
+
+.result-box{
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+    transition:all .4s ease;
+
+}
+
+.result-box.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
