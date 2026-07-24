@@ -61,3 +61,153 @@
     }
 
 }
+/*=========================================
+            MOBILE (768px)
+=========================================*/
+
+@media (max-width:768px){
+
+    .header .container{
+
+        height:70px;
+
+    }
+
+    .navbar{
+
+        display:none;
+
+    }
+
+    .menu-toggle{
+
+        display:block;
+
+    }
+
+    section{
+
+        padding:70px 0;
+
+    }
+
+    .hero{
+
+        padding:70px 0;
+
+    }
+
+    .hero-content h1{
+
+        font-size:2.3rem;
+
+    }
+
+    .hero-content p{
+
+        font-size:1rem;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+        max-width:300px;
+
+    }
+
+    .stocks-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .features-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .learn-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .analysis-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .cta-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+}
+
+
+/*=========================================
+        SMALL MOBILE (480px)
+=========================================*/
+
+@media (max-width:480px){
+
+    .logo-text h2{
+
+        font-size:1rem;
+
+    }
+
+    .logo-text p{
+
+        font-size:.75rem;
+
+    }
+
+    .hero-content h1{
+
+        font-size:1.9rem;
+
+    }
+
+    .section-title h2{
+
+        font-size:2rem;
+
+    }
+
+    .cta-box{
+
+        padding:40px 20px;
+
+    }
+
+    .cta-box h2{
+
+        font-size:1.8rem;
+
+    }
+
+}
