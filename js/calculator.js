@@ -149,7 +149,8 @@ document.getElementById("currentPrice").innerHTML =
     
     const status =
         document.getElementById("valuationStatus");
-
+const meterFill = document.getElementById("meterFill");
+const meterText = document.getElementById("meterText");
     status.className = "";
 
 if (cmp < intrinsic * 0.80) {
