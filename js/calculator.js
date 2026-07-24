@@ -102,3 +102,27 @@ function calculateDCF() {
     }
 
 }
+// Analysis Summary
+
+let summary = "";
+
+if (cmp < intrinsic * 0.80) {
+
+    summary =
+        "The stock is trading significantly below its estimated intrinsic value. Based on the assumptions entered, it appears undervalued and may offer a good long-term investment opportunity.";
+
+}
+else if (cmp <= intrinsic) {
+
+    summary =
+        "The stock is trading close to its intrinsic value. It appears fairly valued, so holding or accumulating gradually may be appropriate.";
+
+}
+else {
+
+    summary =
+        "The stock is trading above its estimated intrinsic value. Based on these assumptions, it appears overvalued and investors should be cautious.";
+
+}
+
+document.getElementById("analysisSummary").innerHTML = summary;
