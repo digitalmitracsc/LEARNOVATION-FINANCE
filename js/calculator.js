@@ -255,5 +255,9 @@ status.className = "";
 
     document.getElementById("analysisSummary").innerHTML =
         "Fill the values and click Calculate.";
+document.getElementById("meterFill").style.width = "0%";
+document.getElementById("meterFill").style.background = "#22C55E";
 
+document.getElementById("meterText").innerHTML =
+    "Waiting for calculation...";
 }
