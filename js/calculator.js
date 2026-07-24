@@ -156,8 +156,6 @@ else {
     status.classList.add("avoid");
 
 }
-
-}
 // Analysis Summary
 
 let summary = "";
@@ -179,7 +177,10 @@ else {
     summary =
         "The stock is trading above its estimated intrinsic value. Based on these assumptions, it appears overvalued and investors should be cautious.";
 
+}
+
 document.getElementById("analysisSummary").innerHTML = summary;
+
 if(resultBox){
 
     setTimeout(()=>{
@@ -189,6 +190,7 @@ if(resultBox){
     },150);
 
 }
+
 }
 
 // ======================================
