@@ -153,10 +153,16 @@ const meterFill = document.getElementById("meterFill");
 const meterText = document.getElementById("meterText");
     status.className = "";
 
+status.className = "";
+
 if (cmp < intrinsic * 0.80) {
 
     status.innerHTML = "🟢 BUY";
     status.classList.add("buy");
+
+    meterFill.style.width = "85%";
+    meterFill.style.background = "#22C55E";
+    meterText.innerHTML = "Undervalued - Good Buying Opportunity";
 
 }
 else if (cmp <= intrinsic) {
@@ -164,11 +170,19 @@ else if (cmp <= intrinsic) {
     status.innerHTML = "🟡 HOLD";
     status.classList.add("hold");
 
+    meterFill.style.width = "55%";
+    meterFill.style.background = "#FACC15";
+    meterText.innerHTML = "Fairly Valued";
+
 }
 else {
 
     status.innerHTML = "🔴 AVOID";
     status.classList.add("avoid");
+
+    meterFill.style.width = "25%";
+    meterFill.style.background = "#EF4444";
+    meterText.innerHTML = "Overvalued";
 
 }
 // Analysis Summary
