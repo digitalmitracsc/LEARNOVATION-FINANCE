@@ -3,7 +3,21 @@
 // Professional DCF Calculator
 // Version 2.0
 // ======================================
+// ======================================
+// Indian Currency Formatter
+// ======================================
 
+function formatCurrency(value){
+
+    return "₹" + Number(value).toLocaleString("en-IN",{
+
+        minimumFractionDigits:2,
+
+        maximumFractionDigits:2
+
+    });
+
+}
 const calculateBtn = document.getElementById("calculateBtn");
 
 if (calculateBtn) {
