@@ -157,7 +157,11 @@ function resetCalculator() {
     document.getElementById("currentPrice").innerHTML = "₹0.00";
     document.getElementById("upsidePotential").innerHTML = "0%";
     document.getElementById("marginSafety").innerHTML = "0%";
-    document.getElementById("valuationStatus").innerHTML = "WAIT";
+    const status = document.getElementById("valuationStatus");
+
+status.innerHTML = "WAIT";
+
+status.className = "";
 
     document.getElementById("analysisSummary").innerHTML =
         "Fill the values and click Calculate.";
