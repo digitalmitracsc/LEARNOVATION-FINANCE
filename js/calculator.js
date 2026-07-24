@@ -104,6 +104,7 @@ if (cmp <= 0) {
 
     let totalValue = 0;
     let currentFCF = fcf;
+    let projectionHTML = "";
 const projectionTable = document.getElementById("projectionTable");
 
 projectionTable.innerHTML = "";
