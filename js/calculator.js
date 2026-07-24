@@ -85,21 +85,26 @@ function calculateDCF() {
     const status =
         document.getElementById("valuationStatus");
 
-    if (cmp < intrinsic * 0.80) {
+    status.className = "";
 
-        status.innerHTML = "🟢 BUY";
+if (cmp < intrinsic * 0.80) {
 
-    }
-    else if (cmp <= intrinsic) {
+    status.innerHTML = "🟢 BUY";
+    status.classList.add("buy");
 
-        status.innerHTML = "🟡 HOLD";
+}
+else if (cmp <= intrinsic) {
 
-    }
-    else {
+    status.innerHTML = "🟡 HOLD";
+    status.classList.add("hold");
 
-        status.innerHTML = "🔴 AVOID";
+}
+else {
 
-    }
+    status.innerHTML = "🔴 AVOID";
+    status.classList.add("avoid");
+
+}
 
 }
 // Analysis Summary
