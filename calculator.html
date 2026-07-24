@@ -57,6 +57,54 @@ Discounted Cash Flow Method.
 </div>
 
 <div class="calculator-box">
+    <div class="calculator-grid">
+
+    <div class="input-group">
+        <label>Free Cash Flow (₹ Cr)</label>
+        <input type="number" id="fcf" placeholder="Example: 10000">
+    </div>
+
+    <div class="input-group">
+        <label>Growth Rate (%)</label>
+        <input type="number" id="growth" placeholder="Example: 12">
+    </div>
+
+    <div class="input-group">
+        <label>Discount Rate (%)</label>
+        <input type="number" id="discount" placeholder="Example: 10">
+    </div>
+
+    <div class="input-group">
+        <label>Terminal Growth (%)</label>
+        <input type="number" id="terminal" placeholder="Example: 5">
+    </div>
+
+    <div class="input-group">
+        <label>Shares Outstanding (Cr)</label>
+        <input type="number" id="shares" placeholder="Example: 450">
+    </div>
+
+</div>
+
+<div class="calculator-btn">
+
+    <button id="calculateBtn" class="btn btn-primary">
+        Calculate Intrinsic Value
+    </button>
+
+</div>
+
+<div class="result-box">
+
+    <h3>Intrinsic Value</h3>
+
+    <h2 id="intrinsicValue">₹0</h2>
+
+    <p id="valuationStatus">
+        Enter values and click Calculate.
+    </p>
+
+</div>
 
 <!-- Yahan inputs aayenge -->
 
