@@ -223,7 +223,7 @@ else {
 }
 
 document.getElementById("analysisSummary").innerHTML = summary;
-
+document.getElementById("projectionTable").innerHTML = projectionHTML;
 if(resultBox){
 
     setTimeout(()=>{
