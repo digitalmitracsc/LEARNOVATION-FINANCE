@@ -111,20 +111,22 @@ projectionTable.innerHTML = "";
     // 10 Year Projection
     for (let year = 1; year <= 10; year++) {
 
-        currentFCF = currentFCF * (1 + growth);
-const presentValue =
-    currentFCF / Math.pow((1 + discount), year);
+    currentFCF = currentFCF * (1 + growth);
 
-projectionTable.innerHTML += `
-<tr>
-    <td>${year}</td>
-    <td>₹${currentFCF.toFixed(2)}</td>
-    <td>₹${presentValue.toFixed(2)}</td>
-</tr>
-`;
-        totalValue += presentValue;
+    const presentValue =
+        currentFCF / Math.pow((1 + discount), year);
 
-    }
+    totalValue += presentValue;
+
+    projectionHTML += `
+        <tr>
+            <td>${year}</td>
+            <td>₹${currentFCF.toFixed(2)}</td>
+            <td>₹${presentValue.toFixed(2)}</td>
+        </tr>
+    `;
+
+}
 
     // Terminal Value
     const terminalValue =
