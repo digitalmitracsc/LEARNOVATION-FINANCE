@@ -137,10 +137,10 @@ if (cmp <= 0) {
         ((intrinsic - cmp) / cmp) * 100;
     // Result
     document.getElementById("intrinsicValue").innerHTML =
-        "₹" + intrinsic.toFixed(2);
+    formatCurrency(intrinsic);
 
-    document.getElementById("currentPrice").innerHTML =
-        "₹" + cmp.toFixed(2);
+document.getElementById("currentPrice").innerHTML =
+    formatCurrency(cmp);
 
     document.getElementById("marginSafety").innerHTML =
         mos.toFixed(2) + "%";
