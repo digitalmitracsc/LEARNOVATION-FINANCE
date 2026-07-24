@@ -211,3 +211,58 @@
     }
 
 }
+/*=========================================
+        MOBILE NAVIGATION
+=========================================*/
+
+@media (max-width:768px){
+
+    .navbar{
+
+        position:absolute;
+
+        top:70px;
+
+        left:0;
+
+        width:100%;
+
+        background:var(--surface);
+
+        border-top:1px solid var(--border);
+
+        display:none;
+
+    }
+
+    .navbar.active{
+
+        display:block;
+
+    }
+
+    .nav-links{
+
+        flex-direction:column;
+
+        gap:0;
+
+    }
+
+    .nav-links li{
+
+        width:100%;
+
+    }
+
+    .nav-links a{
+
+        display:block;
+
+        padding:18px 20px;
+
+        border-bottom:1px solid var(--border);
+
+    }
+
+}
