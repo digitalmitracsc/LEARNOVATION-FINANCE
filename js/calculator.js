@@ -126,6 +126,7 @@ else {
 }
 
 document.getElementById("analysisSummary").innerHTML = summary;
+
 // ======================================
 // Reset Calculator
 // ======================================
