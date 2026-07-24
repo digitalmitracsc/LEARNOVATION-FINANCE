@@ -266,3 +266,28 @@
     }
 
 }
+/*=========================================
+        CALCULATOR RESPONSIVE
+=========================================*/
+
+@media (max-width:768px){
+
+    .calculator-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .calculator-box{
+
+        padding:25px;
+
+    }
+
+    .result-box h2{
+
+        font-size:2.2rem;
+
+    }
+
+}
