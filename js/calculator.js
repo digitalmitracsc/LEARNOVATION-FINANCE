@@ -104,7 +104,9 @@ if (cmp <= 0) {
 
     let totalValue = 0;
     let currentFCF = fcf;
+const projectionTable = document.getElementById("projectionTable");
 
+projectionTable.innerHTML = "";
     // 10 Year Projection
     for (let year = 1; year <= 10; year++) {
 
