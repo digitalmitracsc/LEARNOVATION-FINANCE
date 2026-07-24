@@ -853,3 +853,91 @@ section{
     color:var(--text-light);
 
 }
+/*==================================================
+                DCF CALCULATOR
+==================================================*/
+
+.calculator-box{
+
+    max-width:900px;
+    margin:50px auto 0;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:40px;
+    box-shadow:var(--shadow);
+
+}
+
+.calculator-grid{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+
+}
+
+.input-group{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.input-group label{
+
+    margin-bottom:10px;
+    font-weight:600;
+
+}
+
+.input-group input{
+
+    background:var(--bg);
+    color:var(--text);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:15px;
+    font-size:1rem;
+    outline:none;
+    transition:var(--transition);
+
+}
+
+.input-group input:focus{
+
+    border-color:var(--primary);
+
+}
+
+.calculator-btn{
+
+    text-align:center;
+    margin-top:35px;
+
+}
+
+.result-box{
+
+    margin-top:40px;
+    text-align:center;
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:30px;
+
+}
+
+.result-box h2{
+
+    font-size:3rem;
+    color:var(--primary);
+    margin:15px 0;
+
+}
+
+.result-box p{
+
+    color:var(--text-light);
+
+}
