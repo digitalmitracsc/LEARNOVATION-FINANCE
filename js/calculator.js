@@ -79,7 +79,9 @@ function calculateDCF() {
 
     document.getElementById("marginSafety").innerHTML =
         mos.toFixed(2) + "%";
-
+    document.getElementById("upsidePotential").innerHTML =
+    upside.toFixed(2) + "%";
+    
     const status =
         document.getElementById("valuationStatus");
 
