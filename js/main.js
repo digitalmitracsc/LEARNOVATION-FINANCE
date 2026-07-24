@@ -1,11 +1,9 @@
-/*==================================================
-        LEARNOVATION FINANCE
-        MAIN JAVASCRIPT
-==================================================*/
+// ======================================
+// LEARNOVATION FINANCE
+// main.js
+// ======================================
 
-/*=========================================
-        MOBILE NAVIGATION
-=========================================*/
+// Mobile Menu Toggle
 
 const menuToggle = document.querySelector(".menu-toggle");
 const navbar = document.querySelector(".navbar");
@@ -16,15 +14,12 @@ if (menuToggle && navbar) {
 
         navbar.classList.toggle("active");
 
-        menuToggle.classList.toggle("active");
-
     });
 
 }
 
-/*=========================================
-        CLOSE MENU AFTER CLICK
-=========================================*/
+
+// Close menu after clicking a link
 
 const navLinks = document.querySelectorAll(".nav-links a");
 
@@ -32,10 +27,33 @@ navLinks.forEach(link => {
 
     link.addEventListener("click", () => {
 
-        navbar.classList.remove("active");
+        if (navbar) {
 
-        menuToggle.classList.remove("active");
+            navbar.classList.remove("active");
+
+        }
 
     });
+
+});
+
+
+// Sticky Header Shadow
+
+window.addEventListener("scroll", () => {
+
+    const header = document.querySelector(".header");
+
+    if (!header) return;
+
+    if (window.scrollY > 20) {
+
+        header.style.boxShadow = "0 8px 25px rgba(0,0,0,0.25)";
+
+    } else {
+
+        header.style.boxShadow = "none";
+
+    }
 
 });
