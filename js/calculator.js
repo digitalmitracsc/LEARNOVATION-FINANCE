@@ -31,6 +31,51 @@ function calculateDCF() {
         return;
     }
 
+     // ======================================
+// Input Validation
+// ======================================
+
+if (fcf <= 0) {
+
+    alert("Free Cash Flow must be greater than 0.");
+    return;
+
+}
+
+if (growth < 0 || growth > 0.30) {
+
+    alert("Growth Rate should be between 0% and 30%.");
+    return;
+
+}
+
+if (discount <= 0 || discount > 0.30) {
+
+    alert("Discount Rate should be between 1% and 30%.");
+    return;
+
+}
+
+if (terminal < 0 || terminal > 0.08) {
+
+    alert("Terminal Growth should be between 0% and 8%.");
+    return;
+
+}
+
+if (shares <= 0) {
+
+    alert("Shares Outstanding must be greater than 0.");
+    return;
+
+}
+
+if (cmp <= 0) {
+
+    alert("Current Market Price must be greater than 0.");
+    return;
+
+}
     // Validation
     if (discount <= terminal) {
         alert("Discount Rate should be greater than Terminal Growth Rate.");
