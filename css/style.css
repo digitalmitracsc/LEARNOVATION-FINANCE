@@ -1007,3 +1007,24 @@ section{
     text-align:center;
 
 }
+/*==================================================
+        RECOMMENDATION COLORS
+==================================================*/
+
+.buy{
+
+    color:#22C55E !important;
+
+}
+
+.hold{
+
+    color:#FACC15 !important;
+
+}
+
+.avoid{
+
+    color:#EF4444 !important;
+
+}
