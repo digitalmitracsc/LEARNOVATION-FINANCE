@@ -1,0 +1,98 @@
+/*==================================================
+            LEARNOVATION FINANCE
+                Version 1.0
+==================================================*/
+
+/*==========================
+        GOOGLE FONT
+==========================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/*==========================
+        ROOT VARIABLES
+==========================*/
+
+:root{
+
+    --primary:#22C55E;
+    --primary-dark:#16A34A;
+
+    --bg:#0F172A;
+    --surface:#1E293B;
+    --surface-light:#334155;
+
+    --text:#F8FAFC;
+    --text-light:#CBD5E1;
+
+    --border:#334155;
+
+    --shadow:0 15px 40px rgba(0,0,0,.30);
+
+    --radius:16px;
+
+    --transition:.30s ease;
+
+}
+
+/*==========================
+        RESET
+==========================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    line-height:1.7;
+
+}
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+.container{
+
+    width:min(1200px,92%);
+    margin:auto;
+
+}
+
+section{
+
+    padding:100px 0;
+
+}
