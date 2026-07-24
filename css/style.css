@@ -1049,3 +1049,58 @@ section{
     transform:translateY(0);
 
 }
+/*==================================================
+            FAIR VALUE METER
+==================================================*/
+
+.fair-value-meter{
+
+    margin-top:35px;
+
+}
+
+.fair-value-meter h3{
+
+    margin-bottom:15px;
+
+}
+
+.meter{
+
+    width:100%;
+
+    height:18px;
+
+    background:var(--bg);
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    border:1px solid var(--border);
+
+}
+
+.meter-fill{
+
+    width:0;
+
+    height:100%;
+
+    background:var(--primary);
+
+    transition:all .6s ease;
+
+}
+
+#meterText{
+
+    margin-top:15px;
+
+    text-align:center;
+
+    font-weight:600;
+
+    color:var(--text-light);
+
+}
