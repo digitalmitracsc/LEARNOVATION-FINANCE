@@ -179,9 +179,17 @@ else {
     summary =
         "The stock is trading above its estimated intrinsic value. Based on these assumptions, it appears overvalued and investors should be cautious.";
 
-}
-
 document.getElementById("analysisSummary").innerHTML = summary;
+if(resultBox){
+
+    setTimeout(()=>{
+
+        resultBox.classList.add("show");
+
+    },150);
+
+}
+}
 
 // ======================================
 // Reset Calculator
