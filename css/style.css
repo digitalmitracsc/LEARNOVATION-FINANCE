@@ -1213,3 +1213,34 @@ tr:hover{
     font-weight:600;
 
 }
+/*==================================================
+            DCF GROWTH CHART
+==================================================*/
+
+.chart-box{
+
+    margin-top:60px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:25px;
+
+}
+
+.chart-box h3{
+
+    margin-bottom:20px;
+
+}
+
+.chart-box canvas{
+
+    width:100% !important;
+
+    height:350px !important;
+
+}
