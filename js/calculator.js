@@ -210,6 +210,8 @@ chartValues.push(currentFCF.toFixed(2));
 
     const intrinsic =
         enterpriseValue / shares;
+        document.getElementById("terminalValueDisplay").innerHTML =
+    formatCurrency(discountedTerminal);
 
     // Margin of Safety
     const mos =
