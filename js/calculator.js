@@ -366,3 +366,108 @@ document.getElementById("meterFill").style.background = "#22C55E";
 document.getElementById("meterText").innerHTML =
     "Waiting for calculation...";
 }
+
+// ======================================
+// PDF Export
+// ======================================
+
+const pdfBtn = document.getElementById("pdfBtn");
+
+if (pdfBtn) {
+
+    pdfBtn.addEventListener("click", downloadPDF);
+
+}
+
+function downloadPDF() {
+
+    const { jsPDF } = window.jspdf;
+
+    const doc = new jsPDF();
+
+    let y = 20;
+
+    doc.setFontSize(18);
+    doc.text("LEARNOVATION FINANCE", 20, y);
+
+    y += 12;
+
+    doc.setFontSize(14);
+    doc.text("DCF Valuation Report", 20, y);
+
+    y += 15;
+
+    doc.setFontSize(11);
+
+    doc.text(
+        "Company : " +
+        document.getElementById("reportCompany").innerText,
+        20,
+        y
+    );
+
+    y += 8;
+
+    doc.text(
+        "Symbol : " +
+        document.getElementById("reportSymbol").innerText,
+        20,
+        y
+    );
+
+    y += 12;
+
+    doc.text(
+        "Intrinsic Value : " +
+        document.getElementById("intrinsicValue").innerText,
+        20,
+        y
+    );
+
+    y += 8;
+
+    doc.text(
+        "Current Price : " +
+        document.getElementById("currentPrice").innerText,
+        20,
+        y
+    );
+
+    y += 8;
+
+    doc.text(
+        "Margin of Safety : " +
+        document.getElementById("marginSafety").innerText,
+        20,
+        y
+    );
+
+    y += 8;
+
+    doc.text(
+        "Recommendation : " +
+        document.getElementById("valuationStatus").innerText,
+        20,
+        y
+    );
+
+    y += 15;
+
+    doc.text("Analysis Summary", 20, y);
+
+    y += 8;
+
+    doc.setFontSize(10);
+
+    doc.text(
+        document.getElementById("analysisSummary").innerText,
+        20,
+        y,
+        {
+            maxWidth:170
+        }
+    );
+
+    doc.save("DCF_Report.pdf");
+
+}
