@@ -115,6 +115,65 @@ if (cmp <= 0) {
 const projectionTable = document.getElementById("projectionTable");
 
 projectionTable.innerHTML = "";
+const ctx = document.getElementById("dcfChart");
+
+if (ctx) {
+
+    if (dcfChart) {
+
+        dcfChart.destroy();
+
+    }
+
+    dcfChart = new Chart(ctx, {
+
+        type: "line",
+
+        data: {
+
+            labels: chartLabels,
+
+            datasets: [{
+
+                label: "Projected Free Cash Flow",
+
+                data: chartValues,
+
+                borderColor: "#22C55E",
+
+                backgroundColor: "rgba(34,197,94,0.15)",
+
+                borderWidth: 3,
+
+                fill: true,
+
+                tension: 0.35
+
+            }]
+
+        },
+
+        options: {
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+            plugins: {
+
+                legend: {
+
+                    display: true
+
+                }
+
+            }
+
+        }
+
+    });
+
+}
     // 10 Year Projection
     for (let year = 1; year <= 10; year++) {
 
