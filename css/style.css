@@ -1244,3 +1244,58 @@ tr:hover{
     height:350px !important;
 
 }
+/*==================================================
+        DCF ASSUMPTIONS
+==================================================*/
+
+.assumption-box{
+
+    margin-top:40px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:25px;
+
+}
+
+.assumption-box h3{
+
+    margin-bottom:20px;
+
+}
+
+.assumption-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px 0;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.assumption-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.assumption-item span{
+
+    color:var(--text-light);
+
+}
+
+.assumption-item strong{
+
+    color:var(--text);
+
+}
