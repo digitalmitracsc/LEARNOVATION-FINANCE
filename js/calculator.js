@@ -299,6 +299,22 @@ document.getElementById("assumptionDiscount").innerHTML = (discount * 100).toFix
 document.getElementById("assumptionTerminal").innerHTML = (terminal * 100).toFixed(1) + "%";
 document.getElementById("assumptionShares").innerHTML = shares.toLocaleString("en-IN");
 document.getElementById("projectionTable").innerHTML = projectionHTML;
+// ======================================
+// Report Header
+// ======================================
+
+const companyName =
+    document.getElementById("companyName").value.trim();
+
+const stockSymbol =
+    document.getElementById("stockSymbol").value.trim();
+
+document.getElementById("reportCompany").innerHTML =
+    companyName || "DCF Valuation Report";
+
+document.getElementById("reportSymbol").innerHTML =
+    stockSymbol || "Stock Symbol";
+
 if(resultBox){
 
     setTimeout(()=>{
