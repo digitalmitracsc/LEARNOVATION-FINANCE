@@ -127,6 +127,8 @@ projectionTable.innerHTML = "";
             <td>₹${presentValue.toFixed(2)}</td>
         </tr>
     `;
+    chartLabels.push("Year " + year);
+chartValues.push(currentFCF.toFixed(2));
 
 }
 
