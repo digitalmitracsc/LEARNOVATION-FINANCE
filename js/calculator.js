@@ -18,6 +18,11 @@ function formatCurrency(value){
     });
 
 }
+// ======================================
+// DCF Chart
+// ======================================
+
+let dcfChart = null;
 const calculateBtn = document.getElementById("calculateBtn");
 
 if (calculateBtn) {
