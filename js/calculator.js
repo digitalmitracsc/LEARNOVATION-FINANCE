@@ -275,7 +275,8 @@ document.getElementById("currentPrice").innerHTML =
         generateSensitivityMatrix(
     growth * 100,
     discount * 100,
-    intrinsic
+    intrinsic,
+    cmp
 );
 const meterFill = document.getElementById("meterFill");
 const meterText = document.getElementById("meterText");
