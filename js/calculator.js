@@ -314,6 +314,7 @@ else {
     meterText.innerHTML = "Overvalued";
 
 }
+updateGauge(mos);
 // Analysis Summary
 
 let summary = "";
