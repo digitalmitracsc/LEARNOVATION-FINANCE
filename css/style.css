@@ -1413,9 +1413,13 @@ tr:hover{
 
     color:#9CA3AF;
 
-    margin-bottom:18px;
+    margin:8px 0 18px;
 
     font-size:14px;
+
+    text-align:center;
+
+    line-height:1.6;
 
 }
 
