@@ -82,6 +82,9 @@ if(resultBox){
     const terminal = parseFloat(document.getElementById("terminal").value) / 100;
     const shares = parseFloat(document.getElementById("shares").value);
     const cmp = parseFloat(document.getElementById("cmp").value);
+    
+    const cash = parseFloat(document.getElementById("cash").value) || 0;
+const debt = parseFloat(document.getElementById("debt").value) || 0;
 
     if (
         isNaN(fcf) ||
