@@ -1489,3 +1489,98 @@ tr:hover{
     font-weight:700;
 
 }
+/*=========================================
+        INTRINSIC VALUE GAUGE
+=========================================*/
+
+.gauge-box{
+
+    margin-top:35px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+.gauge{
+
+    width:220px;
+
+    margin:25px auto;
+
+}
+
+.gauge-body{
+
+    width:220px;
+
+    height:110px;
+
+    background:#E5E7EB;
+
+    border-radius:220px 220px 0 0;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.gauge-fill{
+
+    position:absolute;
+
+    width:220px;
+
+    height:110px;
+
+    background:conic-gradient(
+        #22C55E 0deg,
+        #FACC15 90deg,
+        #EF4444 180deg
+    );
+
+    transform-origin:center bottom;
+
+    transform:rotate(-90deg);
+
+    transition:transform .8s ease;
+
+}
+
+.gauge-cover{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:0;
+
+    transform:translateX(-50%);
+
+    width:150px;
+
+    height:75px;
+
+    background:var(--surface);
+
+    border-radius:150px 150px 0 0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:700;
+
+    font-size:20px;
+
+}
