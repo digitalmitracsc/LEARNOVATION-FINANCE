@@ -253,6 +253,8 @@ chartValues.push(currentFCF.toFixed(2));
     const equityValue = enterpriseValue + cash - debt;
 
     const intrinsic = equityValue / shares;
+    console.log("Enterprise Value:", enterpriseValue);
+    console.log("Equity Value:", equityValue);
         document.getElementById("terminalValueDisplay").innerHTML =
     formatCurrency(discountedTerminal);
 
