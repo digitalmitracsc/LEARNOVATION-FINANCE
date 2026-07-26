@@ -339,6 +339,60 @@ document.getElementById("assumptionTerminal").innerHTML = (terminal * 100).toFix
 document.getElementById("assumptionShares").innerHTML = shares.toLocaleString("en-IN");
 document.getElementById("projectionTable").innerHTML = projectionHTML;
 // ======================================
+// Scenario Analysis
+// ======================================
+
+const bearGrowth = Math.max(growth - 0.02, 0);
+const bearDiscount = discount + 0.02;
+
+const bullGrowth = growth + 0.02;
+const bullDiscount = Math.max(discount - 0.02, terminal + 0.01);
+
+const bearValue = calculateScenarioValue(
+    fcf,
+    bearGrowth,
+    bearDiscount,
+    terminal,
+    shares
+);
+
+const baseValue = intrinsic;
+
+const bullValue = calculateScenarioValue(
+    fcf,
+    bullGrowth,
+    bullDiscount,
+    terminal,
+    shares
+);
+
+document.getElementById("bearGrowth").innerHTML =
+    (bearGrowth * 100).toFixed(1) + "%";
+
+document.getElementById("bearDiscount").innerHTML =
+    (bearDiscount * 100).toFixed(1) + "%";
+
+document.getElementById("bearValue").innerHTML =
+    formatCurrency(bearValue);
+
+document.getElementById("baseGrowth").innerHTML =
+    (growth * 100).toFixed(1) + "%";
+
+document.getElementById("baseDiscount").innerHTML =
+    (discount * 100).toFixed(1) + "%";
+
+document.getElementById("baseValue").innerHTML =
+    formatCurrency(baseValue);
+
+document.getElementById("bullGrowth").innerHTML =
+    (bullGrowth * 100).toFixed(1) + "%";
+
+document.getElementById("bullDiscount").innerHTML =
+    (bullDiscount * 100).toFixed(1) + "%";
+
+document.getElementById("bullValue").innerHTML =
+    formatCurrency(bullValue);
+// ======================================
 // Report Header
 // ======================================
 
