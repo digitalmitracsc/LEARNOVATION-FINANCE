@@ -570,6 +570,39 @@ function downloadPDF() {
     doc.save("DCF_Report.pdf");
 
 }
+// ======================================
+// Intrinsic Value Gauge
+// ======================================
+
+function updateGauge(marginSafety){
+
+    const fill = document.getElementById("gaugeFill");
+    const status = document.getElementById("gaugeStatus");
+
+    if(!fill || !status) return;
+
+    let angle = -90;
+
+    if(marginSafety >= 30){
+
+        angle = 0;
+        status.innerText = "BUY";
+
+    }else if(marginSafety >= 10){
+
+        angle = -45;
+        status.innerText = "HOLD";
+
+    }else{
+
+        angle = -90;
+        status.innerText = "AVOID";
+
+    }
+
+    fill.style.transform = `rotate(${angle}deg)`;
+
+}
 
 // ======================================
 // Sensitivity Matrix
