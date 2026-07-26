@@ -577,7 +577,8 @@ function downloadPDF() {
 function generateSensitivityMatrix(
     baseGrowth,
     baseDiscount,
-    baseValue
+    baseValue,
+    cmp
 ){
 
     const head =
