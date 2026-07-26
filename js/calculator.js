@@ -585,4 +585,31 @@ function generateSensitivityMatrix(
 
     head.innerHTML = "";
     body.innerHTML = "";
+    const discountRates = [
+    baseDiscount - 2,
+    baseDiscount - 1,
+    baseDiscount,
+    baseDiscount + 1,
+    baseDiscount + 2
+];
+
+const growthRates = [
+    baseGrowth - 2,
+    baseGrowth - 1,
+    baseGrowth,
+    baseGrowth + 1,
+    baseGrowth + 2
+];
+
+let header = "<tr><th>Growth \\ Discount</th>";
+
+discountRates.forEach(rate => {
+
+    header += `<th>${rate.toFixed(1)}%</th>`;
+
+});
+
+header += "</tr>";
+
+head.innerHTML = header;
 }
