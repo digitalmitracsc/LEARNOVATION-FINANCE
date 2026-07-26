@@ -628,7 +628,29 @@ growthRates.forEach(growth => {
             (1 + (growth - baseGrowth) * 0.08) *
             (1 - (discount - baseDiscount) * 0.06);
 
-        row += `<td>${formatCurrency(value)}</td>`;
+        let cellClass = "";
+
+if (value > cmp * 1.15) {
+
+    cellClass = "heat-buy";
+
+}
+else if (value >= cmp * 0.90) {
+
+    cellClass = "heat-hold";
+
+}
+else {
+
+    cellClass = "heat-avoid";
+
+}
+
+row += `
+<td class="${cellClass}">
+    ${formatCurrency(value)}
+</td>
+`;
 
     });
 
