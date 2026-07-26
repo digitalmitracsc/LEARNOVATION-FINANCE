@@ -1326,3 +1326,62 @@ tr:hover{
     font-size:15px;
 
 }
+/*==================================================
+        SCENARIO ANALYSIS
+==================================================*/
+
+.scenario-box{
+
+    margin-top:40px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:25px;
+
+}
+
+.scenario-box h3{
+
+    margin-bottom:20px;
+
+}
+
+.scenario-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.scenario-table th{
+
+    background:#1f2937;
+
+    color:#ffffff;
+
+    padding:14px;
+
+    text-align:center;
+
+}
+
+.scenario-table td{
+
+    padding:14px;
+
+    text-align:center;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.scenario-table tr:last-child td{
+
+    border-bottom:none;
+
+}
