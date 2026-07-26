@@ -237,7 +237,89 @@ Discounted Cash Flow Method.
     <button id="pdfBtn" class="btn">
     Download PDF Report
 </button>
+<div class="projection-box">
 
+    <h3>10-Year DCF Projection</h3>
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Year</th>
+                    <th>Projected FCF</th>
+                    <th>Present Value</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="projectionTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<div class="chart-box">
+
+    <h3>DCF Growth Chart</h3>
+
+    <canvas id="dcfChart"></canvas>
+
+</div>
+
+<div class="scenario-box">
+
+    <h3>Scenario Analysis</h3>
+
+    <table class="scenario-table">
+
+        <thead>
+
+            <tr>
+
+                <th>Scenario</th>
+                <th>Growth</th>
+                <th>Discount</th>
+                <th>Intrinsic Value</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>🐻 Bear</td>
+                <td id="bearGrowth">-</td>
+                <td id="bearDiscount">-</td>
+                <td id="bearValue">-</td>
+            </tr>
+
+            <tr>
+                <td>⚪ Base</td>
+                <td id="baseGrowth">-</td>
+                <td id="baseDiscount">-</td>
+                <td id="baseValue">-</td>
+            </tr>
+
+            <tr>
+                <td>🚀 Bull</td>
+                <td id="bullGrowth">-</td>
+                <td id="bullDiscount">-</td>
+                <td id="bullValue">-</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
 </div>
 
 </div>
