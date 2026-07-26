@@ -612,4 +612,24 @@ discountRates.forEach(rate => {
 header += "</tr>";
 
 head.innerHTML = header;
+growthRates.forEach(growth => {
+
+    let row = `<tr><th>${growth.toFixed(1)}%</th>`;
+
+    discountRates.forEach(discount => {
+
+        let value =
+            baseValue *
+            (1 + (growth - baseGrowth) * 0.08) *
+            (1 - (discount - baseDiscount) * 0.06);
+
+        row += `<td>${formatCurrency(value)}</td>`;
+
+    });
+
+    row += "</tr>";
+
+    body.innerHTML += row;
+
+});
 }
