@@ -23,6 +23,45 @@ function formatCurrency(value){
 // ======================================
 
 let dcfChart = null;
+// ======================================
+// Reusable DCF Calculator
+// ======================================
+
+function calculateScenarioValue(
+    fcf,
+    growth,
+    discount,
+    terminal,
+    shares
+){
+
+    let totalValue = 0;
+    let currentFCF = fcf;
+
+    for(let year = 1; year <= 10; year++){
+
+        currentFCF = currentFCF * (1 + growth);
+
+        totalValue +=
+            currentFCF /
+            Math.pow(1 + discount, year);
+
+    }
+
+    const terminalValue =
+        (currentFCF * (1 + terminal)) /
+        (discount - terminal);
+
+    const discountedTerminal =
+        terminalValue /
+        Math.pow(1 + discount, 10);
+
+    const enterpriseValue =
+        totalValue + discountedTerminal;
+
+    return enterpriseValue / shares;
+
+}
 const calculateBtn = document.getElementById("calculateBtn");
 
 if (calculateBtn) {
