@@ -564,3 +564,25 @@ function downloadPDF() {
     doc.save("DCF_Report.pdf");
 
 }
+
+// ======================================
+// Sensitivity Matrix
+// ======================================
+
+function generateSensitivityMatrix(
+    baseGrowth,
+    baseDiscount,
+    baseValue
+){
+
+    const head =
+        document.getElementById("sensitivityHead");
+
+    const body =
+        document.getElementById("sensitivityBody");
+
+    if(!head || !body) return;
+
+    head.innerHTML = "";
+    body.innerHTML = "";
+}
