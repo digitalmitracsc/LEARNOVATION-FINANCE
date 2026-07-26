@@ -1385,3 +1385,76 @@ tr:hover{
     border-bottom:none;
 
 }
+/*==================================================
+        SENSITIVITY MATRIX
+==================================================*/
+
+.sensitivity-box{
+
+    margin-top:40px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:25px;
+
+}
+
+.sensitivity-box h3{
+
+    margin-bottom:8px;
+
+}
+
+.matrix-note{
+
+    color:#9CA3AF;
+
+    margin-bottom:18px;
+
+    font-size:14px;
+
+}
+
+.sensitivity-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.sensitivity-table th{
+
+    background:#1F2937;
+
+    color:#ffffff;
+
+    padding:12px;
+
+    text-align:center;
+
+    font-size:14px;
+
+}
+
+.sensitivity-table td{
+
+    padding:12px;
+
+    text-align:center;
+
+    border:1px solid var(--border);
+
+    font-size:14px;
+
+}
+
+.sensitivity-table tbody tr:hover{
+
+    background:rgba(34,197,94,0.08);
+
+}
