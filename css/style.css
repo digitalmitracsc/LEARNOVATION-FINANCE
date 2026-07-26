@@ -1462,3 +1462,30 @@ tr:hover{
     background:rgba(34,197,94,0.08);
 
 }
+/*=========================================
+        Sensitivity Heatmap
+=========================================*/
+
+.heat-buy{
+
+    background:#16A34A !important;
+    color:#fff;
+    font-weight:700;
+
+}
+
+.heat-hold{
+
+    background:#EAB308 !important;
+    color:#111827;
+    font-weight:700;
+
+}
+
+.heat-avoid{
+
+    background:#DC2626 !important;
+    color:#fff;
+    font-weight:700;
+
+}
