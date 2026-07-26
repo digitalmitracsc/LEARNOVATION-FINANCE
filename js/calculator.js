@@ -272,7 +272,11 @@ document.getElementById("currentPrice").innerHTML =
     
     const status =
         document.getElementById("valuationStatus");
-        generateSensitivityMatrix(growth, discount, intrinsicValue);
+        generateSensitivityMatrix(
+    growth * 100,
+    discount * 100,
+    intrinsic
+);
 const meterFill = document.getElementById("meterFill");
 const meterText = document.getElementById("meterText");
     status.className = "";
