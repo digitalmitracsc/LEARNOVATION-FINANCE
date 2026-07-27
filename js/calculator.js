@@ -356,6 +356,12 @@ else {
 }
 
 document.getElementById("analysisSummary").innerHTML = summary;
+document.getElementById("assumptionFCF").innerHTML = formatCurrency(fcf);
+document.getElementById("assumptionGrowth").innerHTML = (growth * 100).toFixed(1) + "%";
+document.getElementById("assumptionDiscount").innerHTML = (discount * 100).toFixed(1) + "%";
+document.getElementById("assumptionTerminal").innerHTML = (terminal * 100).toFixed(1) + "%";
+document.getElementById("assumptionShares").innerHTML = shares.toLocaleString("en-IN");
+document.getElementById("projectionTable").innerHTML = projectionHTML;
 generateInvestmentVerdict(
     mos,
     growth * 100,
@@ -364,12 +370,7 @@ generateInvestmentVerdict(
     cash,
     debt
 );
-document.getElementById("assumptionFCF").innerHTML = formatCurrency(fcf);
-document.getElementById("assumptionGrowth").innerHTML = (growth * 100).toFixed(1) + "%";
-document.getElementById("assumptionDiscount").innerHTML = (discount * 100).toFixed(1) + "%";
-document.getElementById("assumptionTerminal").innerHTML = (terminal * 100).toFixed(1) + "%";
-document.getElementById("assumptionShares").innerHTML = shares.toLocaleString("en-IN");
-document.getElementById("projectionTable").innerHTML = projectionHTML;
+
 // ======================================
 // Scenario Analysis
 // ======================================
