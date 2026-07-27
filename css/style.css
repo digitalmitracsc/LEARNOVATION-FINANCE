@@ -1687,3 +1687,9 @@ tr:hover{
     margin-top:20px;
     width:100%;
 }
+.wacc-box label{
+    display:block;
+    color:#111827;
+    font-weight:600;
+    margin-bottom:8px;
+}
