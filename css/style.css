@@ -1628,3 +1628,34 @@ tr:hover{
     text-align:center;
     margin-bottom:20px;
 }
+/* AI Verdict Text Fix */
+
+.ai-verdict-box{
+    color:#111827;
+}
+
+.ai-verdict-box h3{
+    color:#111827;
+    font-weight:700;
+}
+
+#investmentVerdict{
+    color:#111827;
+    font-size:32px;
+    font-weight:700;
+    text-align:center;
+    margin:20px 0;
+}
+
+.strength-box h4,
+.risk-box h4{
+    color:#111827;
+    font-weight:600;
+}
+
+.strength-box li,
+.risk-box li{
+    color:#374151;
+    margin:8px 0;
+    line-height:1.5;
+}
