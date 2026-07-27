@@ -1693,3 +1693,34 @@ tr:hover{
     font-weight:600;
     margin-bottom:8px;
 }
+.wacc-result{
+    display:none;
+    margin-top:20px;
+    padding:20px;
+    background:#ffffff;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+}
+
+.wacc-result h4{
+    margin-bottom:15px;
+    color:#111827;
+}
+
+.wacc-result p{
+    display:flex;
+    justify-content:space-between;
+    margin:10px 0;
+    color:#374151;
+}
+
+.wacc-result h3{
+    text-align:center;
+    color:#16a34a;
+    margin:15px 0;
+}
+
+#useWACCBtn{
+    width:100%;
+    margin-top:15px;
+}
