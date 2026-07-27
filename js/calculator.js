@@ -865,3 +865,14 @@ document.getElementById("finalWACC").innerHTML =
     (wacc * 100).toFixed(2) + "%";
 
 }
+document
+.getElementById("useWACCBtn")
+.addEventListener("click", function(){
+
+    document.getElementById("discount").value =
+        document
+        .getElementById("finalWACC")
+        .innerText
+        .replace("%","");
+
+});
