@@ -803,3 +803,54 @@ function generateInvestmentVerdict(
     document.getElementById("riskList").innerHTML =
         risks.map(x => `<li>${x}</li>`).join("");
 }
+function calculateWACC(){
+
+    const rf = parseFloat(document.getElementById("riskFree").value) / 100;
+    const beta = parseFloat(document.getElementById("beta").value);
+    const mrp = parseFloat(document.getElementById("marketPremium").value) / 100;
+    const costDebt = parseFloat(document.getElementById("costDebt").value) / 100;
+    const tax = parseFloat(document.getElementById("taxRate").value) / 100;
+
+    const debt =
+        parseFloat(document.getElementById("debt").value);
+
+    const equity =
+        parseFloat(document.getElementById("enterpriseValue").innerText.replace(/[₹,A-Za-z ]/g,""));
+
+    if(isNaN(equity) || equity <= 0){
+
+        alert("Please calculate DCF first.");
+
+        return;
+
+    }
+
+    const costEquity =
+        rf + beta * mrp;
+
+    const afterTaxDebt =
+        costDebt * (1 - tax);
+
+    const totalCapital =
+        equity + debt;
+
+    const weightEquity =
+        equity / totalCapital;
+
+    const weightDebt =
+        debt / totalCapital;
+
+    const wacc =
+        (weightEquity * costEquity) +
+        (weightDebt * afterTaxDebt);
+
+    document.getElementById("discount").value =
+        (wacc * 100).toFixed(2);
+
+    alert(
+        "WACC Calculated : " +
+        (wacc * 100).toFixed(2) +
+        "%"
+    );
+
+}
