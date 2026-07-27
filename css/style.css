@@ -1584,3 +1584,47 @@ tr:hover{
     font-size:20px;
 
 }
+.ai-verdict-box{
+    margin-top:30px;
+    padding:25px;
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.score-circle{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:#2563eb;
+    color:#fff;
+    margin:20px auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.verdict-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.strength-box,
+.risk-box{
+    background:#f9fafb;
+    padding:15px;
+    border-radius:10px;
+}
+
+.strength-box ul,
+.risk-box ul{
+    padding-left:18px;
+}
+
+#investmentVerdict{
+    text-align:center;
+    margin-bottom:20px;
+}
