@@ -722,3 +722,84 @@ row += `
 
 });
 }
+function generateInvestmentVerdict(
+    mos,
+    growth,
+    discount,
+    terminal,
+    cash,
+    debt
+){
+
+    let score = 50;
+
+    let strengths = [];
+    let risks = [];
+
+    // Margin of Safety
+    if(mos >= 40){
+        score += 20;
+        strengths.push("High Margin of Safety");
+    }else if(mos >= 20){
+        score += 10;
+    }else{
+        score -= 15;
+        risks.push("Low Margin of Safety");
+    }
+
+    // Growth
+    if(growth >= 15){
+        score += 15;
+        strengths.push("Strong FCF Growth");
+    }else if(growth < 8){
+        score -= 10;
+        risks.push("Weak Growth");
+    }
+
+    // Discount Rate
+    if(discount > 14){
+        score -= 10;
+        risks.push("High Discount Rate");
+    }
+
+    // Terminal Growth
+    if(terminal >= 4){
+        score += 5;
+    }else{
+        score -= 5;
+        risks.push("Low Terminal Growth");
+    }
+
+    // Cash vs Debt
+    if(cash > debt){
+        score += 10;
+        strengths.push("Healthy Cash Position");
+    }else if(debt > cash){
+        score -= 10;
+        risks.push("High Debt");
+    }
+
+    score = Math.max(0, Math.min(100, Math.round(score)));
+
+    document.getElementById("investmentScore").innerText = score;
+
+    let verdict = "HOLD";
+
+    if(score >= 85){
+        verdict = "🟢 STRONG BUY";
+    }else if(score >= 70){
+        verdict = "🟢 BUY";
+    }else if(score >= 50){
+        verdict = "🟡 HOLD";
+    }else{
+        verdict = "🔴 AVOID";
+    }
+
+    document.getElementById("investmentVerdict").innerText = verdict;
+
+    document.getElementById("strengthList").innerHTML =
+        strengths.map(x => `<li>${x}</li>`).join("");
+
+    document.getElementById("riskList").innerHTML =
+        risks.map(x => `<li>${x}</li>`).join("");
+}
