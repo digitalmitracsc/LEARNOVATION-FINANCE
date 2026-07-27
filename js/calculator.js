@@ -356,6 +356,14 @@ else {
 }
 
 document.getElementById("analysisSummary").innerHTML = summary;
+generateInvestmentVerdict(
+    mos,
+    growth * 100,
+    discount * 100,
+    terminal * 100,
+    cash,
+    debt
+);
 document.getElementById("assumptionFCF").innerHTML = formatCurrency(fcf);
 document.getElementById("assumptionGrowth").innerHTML = (growth * 100).toFixed(1) + "%";
 document.getElementById("assumptionDiscount").innerHTML = (discount * 100).toFixed(1) + "%";
