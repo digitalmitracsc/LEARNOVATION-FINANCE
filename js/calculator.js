@@ -847,10 +847,21 @@ function calculateWACC(){
     document.getElementById("discount").value =
         (wacc * 100).toFixed(2);
 
-    alert(
-        "WACC Calculated : " +
-        (wacc * 100).toFixed(2) +
-        "%"
-    );
+    document.getElementById("waccResult").style.display = "block";
+
+document.getElementById("costEquityResult").innerHTML =
+    (costEquity * 100).toFixed(2) + "%";
+
+document.getElementById("afterTaxDebtResult").innerHTML =
+    (afterTaxDebt * 100).toFixed(2) + "%";
+
+document.getElementById("weightEquityResult").innerHTML =
+    (weightEquity * 100).toFixed(2) + "%";
+
+document.getElementById("weightDebtResult").innerHTML =
+    (weightDebt * 100).toFixed(2) + "%";
+
+document.getElementById("finalWACC").innerHTML =
+    (wacc * 100).toFixed(2) + "%";
 
 }
