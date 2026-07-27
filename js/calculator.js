@@ -272,11 +272,13 @@ document.getElementById("currentPrice").innerHTML =
     formatCurrency(cmp);
     document.getElementById("enterpriseValue").innerHTML =
     "₹" + enterpriseValue.toLocaleString("en-IN", {
+        minimumFractionDigits: 2,
         maximumFractionDigits: 2
     }) + " Cr";
 
 document.getElementById("equityValue").innerHTML =
     "₹" + equityValue.toLocaleString("en-IN", {
+        minimumFractionDigits: 2,
         maximumFractionDigits: 2
     }) + " Cr";
 
