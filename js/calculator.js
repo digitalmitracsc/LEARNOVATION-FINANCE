@@ -271,11 +271,10 @@ chartValues.push(currentFCF.toFixed(2));
 document.getElementById("currentPrice").innerHTML =
     formatCurrency(cmp);
     document.getElementById("enterpriseValue").innerHTML =
-    formatCurrency(enterpriseValue) + " Cr";
-
-document.getElementById("equityValue").innerHTML =
-    formatCurrency(equityValue) + " Cr";
+    enterpriseValue;
     
+    document.getElementById("equityValue").innerHTML =
+    equityValue;
 
     document.getElementById("marginSafety").innerHTML =
         mos.toFixed(2) + "%";
