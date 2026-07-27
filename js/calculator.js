@@ -271,10 +271,14 @@ chartValues.push(currentFCF.toFixed(2));
 document.getElementById("currentPrice").innerHTML =
     formatCurrency(cmp);
     document.getElementById("enterpriseValue").innerHTML =
-    enterpriseValue;
-    
-    document.getElementById("equityValue").innerHTML =
-    equityValue;
+    "₹" + enterpriseValue.toLocaleString("en-IN", {
+        maximumFractionDigits: 2
+    }) + " Cr";
+
+document.getElementById("equityValue").innerHTML =
+    "₹" + equityValue.toLocaleString("en-IN", {
+        maximumFractionDigits: 2
+    }) + " Cr";
 
     document.getElementById("marginSafety").innerHTML =
         mos.toFixed(2) + "%";
